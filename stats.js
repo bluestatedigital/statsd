@@ -25,12 +25,6 @@ if (!config.hostname){
         config.hostname = hostname;
 }
 
-// daemonize
-require('service').run({
-        lockFile: config.lock_file,
-        logFile : config.log_file,
-});
-
 var counters = {};
 var timers = {};
 var debugInt, flushInt, server;
